@@ -1,0 +1,29 @@
+.selector select{
+  // Любые настройки оболочки селекта
+  border: 1px solid #000;
+}
+.selector select option{
+  // Любые настройки пунктов селектора
+  background-color: gray;
+}
+//Если захочешьпоменять открывющую стрелочку
+.selector:after{
+  // Настройка самого значка
+  content: "˅";
+  position:absolute;
+  // Настройки пустого пространства чтобы закрывать задний план
+  padding: 0.5px;
+  // Настройки размера шрифта и его положение
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  // настройки положения
+  top: 1px;
+  left:138px;
+  z-index: 1;
+  //Настройка цвета
+  color:black;
+  background:white;
+  //Что то помогает делать
+  pointer-events: none;
+}

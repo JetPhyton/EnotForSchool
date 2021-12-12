@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>КОНФЕРЕНЦИЯ «ЕСТЕСТВЕННО-НАУЧНЫЕ ОТКРЫТИЯ И ТВОРЧЕСТВО»</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
+    <link rel="icon" type="image/x-icon" href="img/main/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+  <div class="wrapper">
+    <header>
+  <!-- =<Верхняя часть меню>= -->
+    <div class="header-content">
+      <!-- =<Картинка енота>= -->
+        <a href="index.html">
+          <img src="img/icons/enot.png" class="header__img" alt="значек сайта">
+        </a>
+      <!-- =<Картинка енота/>= -->
+      <!-- =<Заголовок сайта>= -->
+        <div class="header__title">
+          КОНФЕРЕНЦИЯ «ЕСТЕСТВЕННО-НАУЧНЫЕ ОТКРЫТИЯ И ТВОРЧЕСТВО»
+        </div>
+      <!-- =<Заголовок сайта/>= -->
+      <!-- =<Иконка бургера>= -->
+        <div class="header__burger"><span></span></div>
+      <!-- =<Иконка бургера/>= -->
+    </div>
+  <!-- =<Верхняя часть меню/>= -->
+</header>
+<nav class="burger_menu">
+  <!-- Серая оболочка зафднего фона -->
+  <div class="nav-bg-gray">
+  <!-- =<Меню>= -->
+    <div class="nav-content">
+      <!-- =<Пункт меню>= -->
+        <a href="form.html" class="nav__item">Регистрация участников</a>
+      <!-- =<Пункт меню/>= -->
+      <!-- =<Пункт меню>= -->
+        <a href="news.html" class="nav__item">Новости</a>
+      <!-- =<Пункт меню/>= -->
+      <!-- =<Пункт меню>= -->
+        <a href="contacts.html" class="nav__item">Контакты</a>
+      <!-- =<Пункт меню/>= -->
+      <!-- =<Пункт меню>= -->
+        <a href="https://67.voronezhschool.ru/?section_id=5" class="nav__item">Сайт организатора</a>
+      <!-- =<Пункт меню/>= -->
+      <!-- =<Пункт меню>= -->
+        <a href="#" class="nav__item">О конференции</a>
+      <!-- =<Пункт меню/>= -->
+      <!-- =<Пункт меню>= -->
+        <a href="https://baltkonkurs.ru/" class="nav__item">Сайт Балтийского конкурса</a>
+      <!-- =<Пункт меню/>= -->
+
+    </div>
+  <!-- =<Меню/>= -->
+  </div>
+</nav>
+
+<!-- =<>= -->
+
+<!-- =</>= -->
+
+    <div class="form-body">
+      <form action="#" id="formit" class="form">
+
+        <h1 class="form__title">Подача заявки</h1>
+
+        <div class="form__item">
+          <label for="forSurname" class="form__label">Фамилия*:</label>
+          <input type="text" id="forSurname" name="surname" class="form__input "  required placeholder=" " placeholder=" " >
+        </div>
+
+        <div class="form__item">
+          <label for="forName" class="form__label">Имя*:</label>
+          <input type="text" id="forName" name="name" class="form__input "  required placeholder=" " placeholder=" ">
+        </div>
+
+        <div class="form__item">
+          <label for="forPatronymic" class="form__label">Отчество (если есть) :</label>
+          <input type="text" id="forPatronymic" name="patronymic" class="form__input">
+        </div>
+
+        <div class="form__item">
+          <label for="forEmail" class="form__label">Email*:</label>
+          <input type="email" id="forEmail" name="email" class="form__input  " required placeholder=" " placeholder=" ">
+        </div>
+
+        <div class="form__item">
+          <label for="forPhone" class="form__label">Телефон*:</label>
+          <input type="tel" id="forPhone" name="phone" class="form__input "  required placeholder=" ">
+        </div>
+
+        <div class="form__item">
+          <label for="forSchool" class="form__label">Школа*:</label>
+          <input type="text" id="forSchool" name="school" class="form__input " required placeholder=" ">
+        </div>
+
+        <div class="form__item">
+          <label  class="form__label">Секция*:</label>
+          <select name="section" class="form__select" required placeholder=" ">
+            <option value="none">Не выбрана</option>
+            <option value="Информатика">Информатика</option>
+            <option value="Физика">Физика</option>
+            <option value="Биология">Биология</option>
+            <option value="Химия">Химия</option>
+          </select>
+        </div>
+
+
+        <h1 class="form__title">Руководитель</h1>
+
+        <div class="form__item-line"></div>
+
+        <div class="form__item">
+          <label for="forSurnameDirector" class="form__label">Фамилия руководителя:</label>
+          <input type="text" id="forSurnameDirector" name="surnameDirector" class="form__input">
+        </div>
+
+        <div class="form__item">
+          <label for="forNameDirector" class="form__label">Имя руководителя:</label>
+          <input type="text" id="forNameDirector" name="nameDirector" class="form__input">
+        </div>
+
+        <div class="form__item">
+          <label for="forPatronymicDirector" class="form__label">Отчество  руководителя (если есть) :</label>
+          <input type="text" id="forPatronymicDirector" name="patronymicDirector" class="form__input">
+        </div>
+
+        <div class="form__item">
+          <label for="forDirectorJobPlace" class="form__label">Место работы  руководителя:</label>
+          <input type="text" id="forDirectorJobPlace" name="jobDirectorPlace" class="form__input">
+        </div>
+
+        <div class="form__item">
+          <label for="forDirectorJob" class="form__label">Должность руководителя:</label>
+          <input type="text" id="forDirectorJob" name="jobDirector" class="form__input">
+        </div>
+
+        <div class="form__item-line"></div>
+
+        <div class="form__item">
+          <label for="forMassage" class="form__label">Дополнительная информация:</label>
+          <textarea name="message" id="forMassage" cols="30" rows="10" class="form__input"></textarea>
+        </div>
+
+        <div class="form__item">
+          <div class="form__file-title">Прикрепить файл</div>
+
+            <input type="file" name="file" class="form__file">
+          </div>
+
+        <div class="form__item">
+          <div class="checkbox">
+          <input type="checkbox" checked id="forAgreement" name="agreement" class="checkbox__input "  required placeholder=" ">
+
+          <label for="forAgreement" class="checkbox__label">
+            Я даю свое согласие на обработку персональных данных в соответсвии с <a href="#">условиями</a>*
+
+          </label>
+          </div>
+
+        </div>
+        <button type="submit" class="form__button">Отправить</button>
+      </form>
+      </div>
+
+    <footer>
+  <nav class="footer-content">
+    <a href="form.html" class="footer-item">Участникам</a>
+    <a href="news.html" class="footer-item">Новости</a>
+    <a href="contacts.html" class="footer-item">Контакты</a>
+    <a href="https://67.voronezhschool.ru/?section_id=5" class="footer-item">Сайт организатора</a>
+    <a href="https://baltkonkurs.ru/features/regional-conferences/winners/" class="footer-item">Результаты</a>
+    <a href="#" class="footer-item">График</a>
+    <a href="#" class="footer-item">Положение о конференции</a>
+  </nav>
+  <img src="img/icons/top_button.png" class="back_to_top" alt="стрелочка вверх">
+</footer>
+
+<!-- =<>= -->
+
+<!-- =</>= -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+  <script src="js/form.js"></script>
+  </body>
+</html>
+
+<!-- =<>= -->
+
+<!-- =</>= -->

@@ -1,0 +1,311 @@
+// <ПОДКЛЮЧЕНИЕ ОСНОВНЫХ ФАЙЛОВ> --------------------------------------------
+
+    @import 'reset_css';
+    @import 'fonts';
+    @import 'mixin';
+    @import"header.scss";
+    @import"footer.scss";
+// </ПОДКЛЮЧЕНИЕ ОСНОВНЫХ ФАЙЛОВ> --------------------------------------------
+
+// <ПЕРЕМЕННЫЕ> --------------------------------------------
+  $minwidth:320px;
+  $mw:900;
+  $md1:$mw+12;
+  $md2:992.98;//МАленькие мониторы/нетбуки
+  $md3:767.98;//Планшеты
+  $md4:479.98;//Телфоны
+// </ПЕРЕМЕННЫЕ> --------------------------------------------
+
+// <ОБОЛОЧКА> --------------------------------------------
+  .wrapper{width: 100%;min-height: 100%;overflow: hidden;}
+// </ОБОЛОЧКА> --------------------------------------------
+
+// <ОСНОВНАЯ СЕТКА> --------------------------------------------
+
+  .container{
+    min-width: $mw+px;margin: 0 auto;width: 100%;
+    @media(max-width: $md1+px){max-width: 970px;}
+    @media(max-width: $md2+px){max-width: 750px;}
+    @media(max-width: $md3+px){max-width: none; padding: 0 10px;}
+  }
+
+  body{
+    // Общий фрифт для сайта
+    font-family: 'RobotoCondensed',Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    // ОЬщий бекграунд
+    // background:;
+
+  }
+
+// </ОСНОВНАЯ СЕТКА> --------------------------------------------
+
+
+
+// <ПОДКЛЮЧЕНИЕ ДОПОЛНИТЕЛЬНЫЪ ФАЙЛОВ> --------------------------------------------
+  @import "easy-slider.scss";
+  @import "form.scss";
+  // @import "dropdown_menu.scss";
+  @import "header__burger.scss";
+  // @import "custom_checkbox.scss";
+  // @import "custom_radiobtn.scss";
+  // @import "custom_selector.scss";
+  // @import "popup.scss";
+  // @import "modal.scss";
+  // @import "modal-img.scss";
+  // @import "progress-line.scss";
+  // @import "progress-circle.scss";
+  // @import "filter.scss";
+  @import "contacts.scss";
+
+// </ПОДКЛЮЧЕНИЕ ДОПОЛНИТЕЛЬНЫЪ ФАЙЛОВ> --------------------------------------------
+
+
+// <ОСНОВНОЙ БЛОК КОДА> --------------------------------------------
+
+// -----|<Слайдер контент>|-----
+// контейнер
+  .slider__nav-buttons {
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+// Кнопочки
+  .slider__nav-button {
+    color: #fff;
+    height: 40px;
+    display: block;
+    font-size: 32px;
+    background-color: #193385;
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+
+  .slider__nav-button:hover {
+    @include scale(1.1);
+    filter: brightness(90%);
+  }
+
+  // -----|<Изменения размеров для планшетов>|-----
+    @media(max-width: 842px){
+      // контейнер
+        .slider__nav-buttons {
+          text-align: center;
+          line-height: 1.2;
+          width: 250px;
+          height: 220px;
+          display: inline-block;
+          margin: auto;
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+        }
+      // Кнопочки
+        .slider__nav-button {
+          color: #fff;
+          display: block;
+          font-size: 28px;
+          background-color: #193385;
+          margin-top: 30px;
+          border-radius: 10px;
+        }
+
+    }
+  // -----|<Изменения размеров для планшетов/>|-----
+
+  // -----|<Изменения размеров для телефонов>|-----
+    @media(max-width: 480px){
+      // контейнер
+        .slider__nav-buttons {
+          text-align: center;
+          line-height: 1.2;
+          width: 250px;
+          height: 220px;
+          display: inline-block;
+          margin: auto;
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+          margin-top: 100px;
+        }
+      // Кнопочки
+        .slider__nav-button {
+          color: #fff;
+          display: block;
+          font-size: 28px;
+          background-color: #193385;
+          margin-top: 30px;
+          border-radius: 10px;
+        }
+
+        .slider__nav {
+          font-size: 50px;
+        }
+
+    }
+  // -----|<Изменения размеров для телефонов/>|-----
+
+// -----|<Слайдер контент/>|-----
+
+
+
+// -----|<Недавние новости>|-----
+  .news {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .news__title {
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .news-content{
+    margin-top: 40px;
+    @include flexbox();
+    justify-content: space-around;
+  }
+
+  .news__item {
+    width: 310px;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.8);
+    transition: 0.1s ease;
+    color: #000;
+  }
+
+  .news__item:hover{
+    cursor: pointer;
+    @include scale(1.1);
+    .news__item-img {
+      filter: brightness(75%);
+    }
+  }
+
+  .news__item-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .news__item-title {
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .news__item-date {
+    display: inline-block;
+    float: right;
+  }
+
+  .news__item-subtitle {
+    margin-top: 12px;
+  }
+
+
+  // -----|<Изменения размеров для маленьких манеторов>|-----
+    @media(max-width: 1324px){
+      .news-content{
+        display: block;
+      }
+      .news__item {
+        margin-left: 20%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  // -----|<Изменения размеров для маленьких манеторов/>|-----
+
+  // -----|<Изменения размеров для планшетов>|-----
+    @media(max-width: 1108px){
+      .news__item {
+        margin-left: 15%;
+      }
+    }
+  // -----|<Изменения размеров для планшетов/>|-----
+
+  // -----|<Изменения размеров для планшетов>|-----
+    @media(max-width: 954px){
+      .news__item {
+        margin-left: 10%;
+      }
+    }
+  // -----|<Изменения размеров для планшетов/>|-----
+
+
+  // -----|<Изменения размеров для телефонов>|-----
+    @media(max-width: 814px){
+      .news__item {
+        display: block;
+        margin: 20px auto 20px auto;
+      }
+
+    }
+  // -----|<Изменения размеров для телефонов/>|-----
+// -----|<Недавние новости/>|-----
+
+
+// -----|<Партнеры>|-----
+    .partners {
+      margin-bottom: 40px;
+    }
+
+    .partners__title {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .partners__item {
+      width: 150px;
+      display: inline-block;
+    }
+
+    .partners__top-content{
+      @include flexbox();
+      justify-content: space-around;
+      align-items: center;
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+    }
+
+    .partners__bottom-content{
+      @include flexbox();
+      justify-content: space-around;
+      align-items: center;
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+    }
+
+    // -----|<Партнеры для планшетов>|-----
+      @media (max-width: 780px) {
+        .partners__top-content{
+          display: block;
+          margin: 0;
+        }
+
+        .partners__bottom-content{
+          display: block;
+          margin: 0;
+        }
+        .partners__item {
+          display: block;
+          margin: 20px auto 0 auto;
+        }
+      }
+    // -----|<Партнеры для планшетов/>|-----
+// -----|<Партнеры/>|-----
+
+
+// </ОСНОВНОЙ БЛОК КОДА> --------------------------------------------
+
+// -----|<>|-----
+
+// -----|</>|-----

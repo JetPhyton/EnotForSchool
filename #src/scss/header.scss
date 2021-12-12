@@ -1,0 +1,125 @@
+// ------------------------------------------------------------------
+header{width: 100%; height: 90px; background-color: #193385; color: #fff;}
+nav{width: 100%; height: 40px; background-color: #fff;}
+nav.footer-content{background-color: #193385;}
+// ------------------------------------------------------------------
+// position: fixed; z-index: 5000;
+
+// Основной блок кода
+
+// ------------------------------------------------------------------
+
+// -----|<Шапка сайта>|-----
+
+// -----|<Контент шапки сайта>|-----
+  .header-content {
+    padding-top: 12px;
+    max-width: 1360px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-content {
+    max-width: 1360px;
+    height: 100%;
+    margin: 0 auto;
+  }
+// -----|<Контент шапки сайта/>|-----
+
+// -----|<Часть основного контента>|-----
+  .header__img {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .header__img:hover{
+    cursor: pointer;
+    animation: enot 3s ease;
+  }
+
+  .header__title {
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 18px;
+    margin-left: 30px;
+  }
+// -----|<Часть основного контента/>|-----
+
+// -----|<Нижняя часть меню>|-----
+  .nav__item {
+    margin-top: 5px;
+    display: inline-block;
+    height: 30px;
+    padding: 10px 14px;
+    line-height: 0.4;
+    color: #8c8c7b;
+    transition: 0.3s;
+  }
+  // При наведении выделение
+  .nav__item:hover {
+    color: #000;
+  }
+// -----|<Нижняя часть меню/>|-----
+
+// -----|<Шапка сайта/>|-----
+
+// -----|<Шапка сайта на телефонах и планшетах>|-----
+  @media (max-width: 842px) {
+    .header__title {
+      display: none;
+    }
+    .nav__item {
+      text-align: center;
+      margin-top: 10px;
+      padding: 5px 10px;
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .nav-bg-gray{
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 90px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .nav-content{
+      background-color: #fff;
+      height: auto;
+      animation: ShowMenu 0.1s ease;
+    }
+  }
+
+  // -----|<Анимация появления меню на планшетай и телефонах>|-----
+    @keyframes ShowMenu {
+      from{margin-top: -900px;}
+      to{margin-top: 0;}
+    }
+    @keyframes enot {
+         0% {
+          transform:rotate(0deg)
+         }
+         12% {
+          transform:rotate(40deg)
+         }
+         50% {
+          transform:rotate(-360deg)
+         }
+         70% {
+          transform:rotate(10deg)
+         }
+         100% {
+          transform:rotate(-360deg)
+         }
+    }
+  // -----|<Анимация появления меню на планшетай и телефонах/>|-----
+
+// -----|<Шапка сайта на телефонах и планшетах/>|-----
+// ------------------------------------------------------------------
+
+// -----|<>|-----
+
+// -----|</>|-----

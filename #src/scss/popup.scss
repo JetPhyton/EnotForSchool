@@ -1,0 +1,22 @@
+.popup {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #000;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.popup__text {
+  visibility: hidden;
+  width: 200px;
+  border: 1px solid #000;
+  margin-top: -45px;
+  padding: 2px;
+  padding-top: 6px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.popup__text.active{
+  visibility: visible;
+}

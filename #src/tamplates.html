@@ -1,0 +1,59 @@
+//checkbox
+(label.checkbox(input[type="checkbox"]+div.checkbox__text))*1
+//tick-checkbox
+
+//radio
+(label.radio(input[type="radio"]+div.radio__text))*1
+//selector
+.selector(select(option*5))
+//меню бургер,лучше савить перед меню
+.header__burger(span)
+//Выпадающее меню: первое умножение- количество подменю, второе - меню
+ul.menu(li(a[href="#"]+ul.submenu(li(a[href="#"])*5))*4)
+//Слайдер
+div.slider(div.slider__item(img[src="img/#"])*3+div.slider__nav(div.slider__nav-left+div.slider__nav-right))
+//POPup
+div.popup[onclick="popUp(n)"]>div.popup__text
+//modal
+div.modal-block(div.modalBtn{open modal}+div.modal(div.modal-content(span.close{&times;}+p{lorem16})))
+//modal-image
+img[src="#"].open-modal-img+div.modal-img-content(span.modal-img-close{&times;}+img[src="#"].modal-img)
+//progress-line
+.progress-line(div.progressbar-line__main(.progressbar-line__label))+div.progres-line-btn
+//progress-circle
+.timer>div.timer__line+div.timer__body(div.timer__counter(span{$}*10))
+//filter
+input[type="text" placeholder="search for names"].myInput+ul.muUL(li(a[href="#"].header)+li(a[href="#"])*2)
+//Sizable images
+db
+maxw100%
+ha
+//NO changes to type:textarea
+resize:none/vertical
+//tabs
+
+//api
+
+//accordion
+
+//paralax
+
+//geometry figures tip
+
+//forms
+
+//icons-font
+
+//modal-gallery
+
+//cloud-zoom
+
+//date-picker
+
+//pagging
+
+//rootpage
+
+//ui
+
+//vendors

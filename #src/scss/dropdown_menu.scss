@@ -1,0 +1,18 @@
+.menu>li{
+  position: relative;
+  height: 100% ;
+  border: 1px solid #000;
+  display: inline-block;
+}
+.submenu{
+  position: absolute;
+  min-height: 300%;
+  padding: 5px;
+  border: 1px solid #000;
+  text-align: center;
+  display: none;
+  transition: all 1s ease;
+}
+.menu>li:hover .submenu{
+  display: block;
+}
