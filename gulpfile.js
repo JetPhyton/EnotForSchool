@@ -2,7 +2,7 @@ let project_folder = require("path").basename(__dirname);
 let source_folder = "#src";
 
 
-var fs =require('fs');
+var fs = require('fs');
 
 
 var gulp = require('gulp');
@@ -43,26 +43,26 @@ let path = {
     fonts: source_folder + "/fonts/*.{ttf,woff}",
   },
   watch: {
-    kit:  source_folder + "/**/*.kit",
+    kit: source_folder + "/**/*.kit",
     html: source_folder + "/**/*.html",
     css: source_folder + "/scss/**/*.scss",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.{ttf,woff}",
   },
-  clean:"./" + project_folder + "/"
+  clean: "./" + project_folder + "/"
 
 }
 
 
 
 function watchFiles() {
-  gulp.watch([path.watch.kit],html),
-  gulp.watch([path.watch.html],html),
-  gulp.watch([path.watch.css],css),
-  gulp.watch([path.watch.js],js),
-  gulp.watch([path.watch.img],img),
-  gulp.watch([path.watch.fonts],fonts)
+  gulp.watch([path.watch.kit], html),
+    gulp.watch([path.watch.html], html),
+    gulp.watch([path.watch.css], css),
+    gulp.watch([path.watch.js], js),
+    gulp.watch([path.watch.img], img),
+    gulp.watch([path.watch.fonts], fonts)
 }
 
 
@@ -75,11 +75,11 @@ function clean(params) {
 
 function browserSync() {
   return browsersync.init({
-    server:{
-      baseDir:'./' + project_folder + "/"
+    server: {
+      baseDir: './' + project_folder + "/"
     },
-    port:3000,
-    notify:false
+    port: 3000,
+    notify: false
   });
 }
 
@@ -87,52 +87,52 @@ function browserSync() {
 
 function html() {
   return gulp.src(path.src.html)
-  .pipe(kit())
-  .pipe(gulp.dest(path.build.html))
-  .pipe(browsersync.stream())
+    .pipe(kit())
+    .pipe(gulp.dest(path.build.html))
+    .pipe(browsersync.stream())
 }
 
 
 
 function css() {
   return gulp.src(path.src.css)
-  .pipe(sass())
-  // {outputStyle: 'compressed'}
-  .pipe(gulp.dest(path.build.css))
-  .pipe(browsersync.stream())
+    .pipe(sass())
+    // {outputStyle: 'compressed'}
+    .pipe(gulp.dest(path.build.css))
+    .pipe(browsersync.stream())
 }
 
 
 
 function js() {
   return gulp.src(path.src.js)
-  .pipe(importJs())
-  // .pipe(uglify())
-  .pipe(gulp.dest(path.build.js))
-  .pipe(browsersync.stream())
+    // .pipe(importJs())
+    // .pipe(uglify())
+    .pipe(gulp.dest(path.build.js))
+    .pipe(browsersync.stream())
 }
 
 
 
 function img() {
   return gulp.src(path.src.img)
-  .pipe(imagemin({
-    progressive: true,
-    svgoPlugins: [{removeViewBox:false}],
-    interlaced: true,
-    optimizationLevel: 3
-  }))
-  .pipe(gulp.dest(path.build.img))
-  .pipe(browsersync.stream())
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }],
+      interlaced: true,
+      optimizationLevel: 3
+    }))
+    .pipe(gulp.dest(path.build.img))
+    .pipe(browsersync.stream())
 }
 
 function fonts() {
   return gulp.src(path.src.fonts)
-  .pipe(gulp.dest(path.build.fonts))
-  .pipe(browsersync.stream())
+    .pipe(gulp.dest(path.build.fonts))
+    .pipe(browsersync.stream())
 }
 
 
 
 
-gulp.task('default',gulp.parallel(gulp.series(clean,gulp.parallel(html,css,js,img,fonts)),watchFiles,browserSync));
+gulp.task('default', gulp.parallel(gulp.series(clean, gulp.parallel(html, css, js, img, fonts)), watchFiles, browserSync));

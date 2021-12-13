@@ -73,6 +73,7 @@
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
+    cursor: default;
   }
 // Кнопочки
   .slider__nav-button {
@@ -83,11 +84,13 @@
     background-color: #193385;
     margin-top: 30px;
     border-radius: 10px;
+  
   }
 
   .slider__nav-button:hover {
     @include scale(1.1);
     filter: brightness(90%);
+    transition-duration: 10ms;
   }
 
   // -----|<Изменения размеров для планшетов>|-----
